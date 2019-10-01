@@ -11,4 +11,3 @@ const QuestionAnswerSchema = new mongoose.Schema({
 });
 const QuestionAnswer = mongoose.model('QuestionAnswerCols', QuestionAnswerSchema);
 exports.QuestionAnswer = QuestionAnswer;
-// exports.QuestionAnswer = mongoose.model('QuestionAnswer', QuestionAnswerSchema);
