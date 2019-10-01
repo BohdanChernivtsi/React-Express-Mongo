@@ -15,14 +15,14 @@ import LinearProgress from '@material-ui/core/LinearProgress';
 
 const BorderLinearProgress = withStyles({
     root: {
-      height: 10,
-      backgroundColor: lighten('#ff6c5c', 0.5),
+        height: 10,
+        backgroundColor: lighten('#ff6c5c', 0.5),
     },
     bar: {
-      borderRadius: 20,
-      backgroundColor: '#ff6c5c',
+        borderRadius: 20,
+        backgroundColor: '#ff6c5c',
     },
-  })(LinearProgress);
+})(LinearProgress);
 
 class QuestionList extends React.Component {
 
@@ -43,21 +43,21 @@ class QuestionList extends React.Component {
 
     resetData() {
         axios.get(`http://localhost:3001/questions`)
-        .then(res => {
-            const questions = res.data;
-            this.setState(() => {
-                const newQuestions = [...questions]
-                for (let key in newQuestions) {
-                    newQuestions[key].opened = false;
-                    newQuestions[key].correct = null;
-                    newQuestions[key].clicked = false;
-                    newQuestions[key].index = key;
-                }
-                return {
-                    questions: newQuestions
-                }
+            .then(res => {
+                const questions = res.data;
+                this.setState(() => {
+                    const newQuestions = [...questions]
+                    for (let key in newQuestions) {
+                        newQuestions[key].opened = false;
+                        newQuestions[key].correct = null;
+                        newQuestions[key].clicked = false;
+                        newQuestions[key].index = key;
+                    }
+                    return {
+                        questions: newQuestions
+                    }
+                })
             })
-        })
     }
 
     componentDidMount() {
@@ -150,7 +150,7 @@ class QuestionList extends React.Component {
                             value={this.state.score * 10}
                         />
                         <DialogContentText id="alert-dialog-description">
-                            Score is {this.state.score * 10} % 
+                            Score is {this.state.score * 10} %
                         </DialogContentText>
                     </DialogContent>
                     <DialogActions>
