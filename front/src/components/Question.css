@@ -1,0 +1,28 @@
+.Item {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 0px grey;
+    background-color: rgb(173, 104, 238);
+    height: fit-content;
+}
+
+.empty {
+    width: 4vw;
+    height: 25vh;
+    margin: 20px;
+}
+
+.badge {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.right {
+    background-color: rgb(126, 228, 126);
+}
+
+.wrong {
+    background-color: rgb(248, 91, 91);
+}

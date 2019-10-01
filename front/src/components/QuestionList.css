@@ -1,0 +1,5 @@
+.QuestionList {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+}
